@@ -18,8 +18,7 @@ import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
-import Input from "@material-ui/core/Input";
-import { FormControl } from "@material-ui/core";
+
 //////// STYLING
 const useStyles = makeStyles({
   card: {
@@ -52,41 +51,6 @@ export function Forms({
   const classes = useStyles();
   return (
     <div className="form-style">
-      {/* <form onSubmit={event => onFormSubmit(event, form)}>
-        Let's add some Smurfs to the village !<br />
-        <input
-          type="text"
-          name="name"
-          value={form.name}
-          placeholder="smurf's name here"
-          onChange={onValueChange}
-        />
-        <br />
-        <input
-          type="text"
-          name="age"
-          value={form.age}
-          placeholder="smurf's age here"
-          onChange={onValueChange}
-        />
-        <br />
-        <input
-          type="text"
-          name="height"
-          value={form.height}
-          placeholder="smurf's height here"
-          onChange={onValueChange}
-        />
-        <br />
-        <button style={{ marginBottom: "40px" }}>
-          Add a new smurf to the village !
-        </button>
-      </form> */}
-      {/* {smurfsArray.map((aSmurf, i) => (
-        <div key={i}>
-          Name: {aSmurf.name}, Age: {aSmurf.age}, Height: {aSmurf.height}
-        </div>
-      ))} */}
       <form
         style={{ marginTop: "100px" }}
         className={classes.root}
