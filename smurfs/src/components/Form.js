@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getSmurfsFromApi, inputChange, submit,postNewSmurf } from "../state/actionCreators";
+import {
+  getSmurfsFromApi,
+  inputChange,
+  submit,
+  postNewSmurf
+} from "../state/actionCreators";
 
 export function Forms({
   smurfsArray,
@@ -12,22 +17,21 @@ export function Forms({
 }) {
   useEffect(() => {
     getSmurfsFromApi();
-  },[]);
+  }, []);
 
   const onValueChange = event => {
     inputChange(event.target.name, event.target.value);
   };
 
-  const onFormSubmit = (event,form) => {
+  const onFormSubmit = (event, form) => {
     event.preventDefault();
-        postNewSmurf(form)
+    postNewSmurf(form);
     submit();
-
   };
   return (
     <>
       <div>The form will be here</div>
-      <form onSubmit={(event)=>onFormSubmit(event,form)}>
+      <form onSubmit={event => onFormSubmit(event, form)}>
         Let's add some Smurfs to the village !<br />
         <input
           type="text"

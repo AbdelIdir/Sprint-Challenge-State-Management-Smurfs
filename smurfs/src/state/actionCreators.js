@@ -30,16 +30,14 @@ export const submit = () => {
   };
 };
 
-export const postNewSmurf = (newSmurfFormValues) => dispatch => {
+export const postNewSmurf = newSmurfFormValues => dispatch => {
   axios
-  .post("http://localhost:3333/smurfs",newSmurfFormValues)
-  .then(
-    res=>{
+    .post("http://localhost:3333/smurfs", newSmurfFormValues)
+    .then(res => {
       dispatch({
         type: types.SET_SMURFS,
         payload: res.data
       });
-    }
-  )
-  .catch(err=>err)
-}
+    })
+    .catch(err => err);
+};
