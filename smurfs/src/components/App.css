@@ -8,6 +8,7 @@
 }
 
 .App-header {
+  padding-left: 50%;
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -23,6 +24,15 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-style {
+  display: flex;
+  flex-wrap: wrap;
 }
