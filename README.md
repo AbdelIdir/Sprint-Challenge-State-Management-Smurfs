@@ -23,10 +23,29 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+      We are able to access data through any component without tedious prop drilling .
+- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do?
+      Actions send data from the app to the store to be used.
+      They are the channels through which we send informations to the store.
+      Reducers make changes to the application state through the actions that it receive.
+
+The store has the whole state of the app in an immutable object tree.
+They help making the state management of the app consistent and clean.
+Why is the store known as a 'single source of truth' in a redux application?
+It is our state tree, that is immutable. It keeps the app clean and makes it easier to work on the state of the app.
+
+- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the
+      other?
+      Application state is stored at the top, and made easier to modify or tweak as it is all stored in the same place.
+      Component state lives in said component . It would be fine to have a component state that is not connected to any other states,components , or features.
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux thunk is a middleware that calls in the action creators we make,it passes the data we retrieve from an API back to it.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+I like using React hooks for smaller apps, and redux for larger ,more complex apps. It depends on the project.
+I enjoy using both .
 
 ## Project Set Up
 
